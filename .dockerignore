@@ -1,0 +1,8 @@
+.github/
+.git/
+build/
+
+.gitignore
+build.bat
+LICENSE.txt
+README.md
