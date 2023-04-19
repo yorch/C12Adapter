@@ -1,8 +1,8 @@
 IF(INSIDE_METERINGSDK)
-   OPTION(M_COMPANY_NAME                  "Elster Solutions")
-   OPTION(M_PRODUCT_NAME                  "MyProduct"       )
-   OPTION(M_PRODUCT_LEGAL_COPYRIGHT       "Copyright (c) 1997-2017 Elster Solutions")
-   OPTION(M_PRODUCT_VERSION               "1.0.0")
+   SET(M_COMPANY_NAME                  "Elster Solutions")
+   SET(M_PRODUCT_NAME                  "MyProduct"       )
+   SET(M_PRODUCT_LEGAL_COPYRIGHT       "Copyright (c) 1997-2017 Elster Solutions")
+   SET(M_PRODUCT_VERSION               "1.0.0")
    SET(M_GLOBAL_MESSAGE_CATALOG_DOMAIN ""                                                    CACHE STRING "Global message catalog domain name")
 
    MESSAGE(STATUS "Project build location (CMAKE_BINARY_DIR) = ${CMAKE_BINARY_DIR}")
@@ -24,6 +24,11 @@ IF(INSIDE_METERINGSDK)
    ENDFOREACH()
    SET(M_SDK_VERSION "${M_SDK_VERSION_MAJOR}.${M_SDK_VERSION_MIDDLE}.${M_SDK_VERSION_MINOR}.${M_SDK_VERSION_TAG}")
    MESSAGE(STATUS "MeteringSDK version determined from header: ${M_SDK_VERSION}")
+
+   MESSAGE(STATUS "Company name: ${M_COMPANY_NAME}")
+   MESSAGE(STATUS "Product name: ${M_PRODUCT_NAME}")
+   MESSAGE(STATUS "Product legal copyright: ${M_PRODUCT_LEGAL_COPYRIGHT}")
+   MESSAGE(STATUS "Product version: ${M_PRODUCT_VERSION}")
 
    # Parse product version into separate defines M_PRODUCT_VERSION_MAJOR, M_PRODUCT_VERSION_MIDDLE, M_PRODUCT_VERSION_MINOR, and M_PRODUCT_VERSION_TAG
    # Use subversion info if the fourth digit was not given explicitly
