@@ -16,3 +16,10 @@ You might have to edit toolchain file or create your own per your cross compilin
 API Reference: https://ElsterSolutionsOpensource.github.io/C12Adapter
 
 To generate API reference install doxygen and say from the top level directory of the project: **doxygen Doxyfile**
+
+
+## Build with Docker
+
+```sh
+make docker-build
+```
